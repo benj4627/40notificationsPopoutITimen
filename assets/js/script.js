@@ -4,11 +4,14 @@ let toggleUserEl = document.querySelector('.toggleUser');
 // Fang .notifications
 let notificationsEl = document.querySelector('.notifications'); 
 
+function toggle(){
 // Når man klikker på ikonet, skal .notications vises - I skal finde ud af hvordan det skal gøre, Google og evt. eller spørge om hjælp
 toggleUserEl.addEventListener('click', () => {
     // Toggles mellem de pågældende css classes, og på den måde ændrer right fra -100% til 0, sådan at notifications kommer ind på skærmen igen. 
     notificationsEl.classList.toggle('notificationsOpen');
   });
+};
+toggle();
 
 
 // Her er et bud på hvordan det KUNNE se ud: https://watch.screencastify.com/v/0vbuYrwmHcayz9RFVkYO / https://www.youtube.com/watch?v=TOiEd8WUHxc

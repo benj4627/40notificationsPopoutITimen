@@ -61,7 +61,7 @@ nav img {
   padding: 1rem;
   border-radius: 6px;
   width: 300px;
-  transition: .3s ease-in-out;
+  transition: .3s cubic-bezier(0.8, .8, 0.1, 1.2);
 }
 
 /* her bliver der tilføjet styling til den nye class, som får notifications ind på siden igen. Med javascript toggle, tildeler vi .notificationsOpen til klasse, så at den slider ind på skærmen */
