@@ -1,17 +1,9 @@
-/* reset template */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font: inherit;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap");
 
 body {
-    min-height: 100vh;
-}
-
-a {
-    text-decoration: none;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
 }
 
 h1,
@@ -19,29 +11,78 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-    text-wrap: balance;
-    font-weight: normal;
+h6,
+ul {
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
 }
 
-p {
-    text-wrap: pretty; 
-    max-width: 75ch;
-    margin-bottom: 2rem;
-    line-height: 1.5rem;
+nav {
+  background: #edf1f2;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
-img,
-picture,
-svg,
-video {
-    max-width: 100%;
-    display: block; 
-    height: auto; 
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
 }
 
-button,
-input,
-form {
-    font: inherit;
+nav a {
+  display: block;
+  padding: 1rem 2rem;
+  color: #222;
+  text-decoration: none;
+}
+
+nav img {
+  border-radius: 50%;
+  width: 40px;
+  margin: 1rem;
+  border: 1px solid orange;
+}
+
+.toggleUser {
+  cursor: pointer;
+}
+
+/* her bliver notifications stylet, og med right: -100% flytter vi den helt ud af viewporten */
+.notifications {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  right: -100%;
+  padding: 1rem;
+  border-radius: 6px;
+  width: 300px;
+  transition: .3s ease-in-out;
+}
+
+/* her bliver der tilføjet styling til den nye class, som får notifications ind på siden igen. Med javascript toggle, tildeler vi .notificationsOpen til klasse, så at den slider ind på skærmen */
+.notifications.notificationsOpen {
+  right: 0;
+}
+
+.notification-header {
+  font-size: 24px;
+}
+
+.notifications > div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.notifications p {
+  font-size: 14px;
+}
+
+.time {
+  color: #aaa;
 }
